@@ -10,14 +10,15 @@
 
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
-        <link rel="shortcut icon" href="/home/pablo/documents/Seven/seven/site3/oi_seven/img/ico-colecao-oi-M.png">
-        <!--<link rel="stylesheet" href="../css/normalize.min.css">-->
-        <link href="/home/pablo/documents/Seven/seven/site3/oi_seven/css/normalize.min.css" rel="stylesheet">
-        <!--<link rel="stylesheet" href="../css/main.css">-->
-        <link href="/home/pablo/documents/Seven/seven/site3/oi_seven/css/main.css" rel="stylesheet">
+        <!-- images for this template -->
+        <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/apple-touch-icon.png') }}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='img/ico-colecao-oi-M.png') }}">
 
-        <script src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+        <script src="{{ url_for('static', filename='js/vendor/modernizr-2.8.3-respond-1.4.2.min.js')  }}"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -27,9 +28,9 @@
         <div class="header-container">
             <header class="wrapper clearfix">
                 <section class="galeria">
-                <img class="capa" src="/home/pablo/documents/Seven/seven/site3/oi_seven/img/oi1.jpg"/>
-                <img class="capa" src="/home/pablo/documents/Seven/seven/site3/oi_seven/img/oi fibra.png"/>
-                <img class="capa" src="/home/pablo/documents/Seven/seven/site3/oi_seven/img/oi-conta-total-2-1.jpg"/>
+                <img class="capa" src="{{ url_for('static', filename='img/oi1.jpg') }}"/>
+                <img class="capa" src="{{ url_for('static', filename='img/oi fibra.png') }}"/>
+                <img class="capa" src="{{ url_for('static', filename='img/oi-conta-total-2-1.jpg') }}"/>
                 </section>
             </header>
         </div>
@@ -40,27 +41,26 @@
                 <article>
                     <header>
                         <h1>Quer internet, TV ou telefone fixo? Quer tudo isso junto?</h1>
-                        <p>A<img src="/home/pablo/documents/Seven/seven/site3/oi_seven/img/oi.png" width="40px" height="40px">tras pra você, cliente, diversos serviços e com preços muito acessíveis para qualquer bolso.
+                        <p>A<img src="{{ url_for('static', filename='img/oi.png') }}" width="40px" height="40px">tras pra você, cliente, diversos serviços e com preços muito acessíveis para qualquer bolso.
                             Temos serviços com par metálico e fibra óptica. <b>ISSO MESMO!! FIBRA ÓPTICA!!</b> Mas ainda assim, tenhamos calma. Para sabermos se você poderá ter fibra chegando diretamente na sua casa, precisamos que você deixe seus contatos, seja no formulário deste site ou diretamente na nossa página do Facebook, para verificarmos a viabilidade.</p>
                     </header>
                     <section>
                         <br>
-                        <h2>Combo<img src="/home/pablo/documents/Seven/seven/site3/oi_seven/img/oi.png" width="80px" height="80px">: </h2>
-                        <p><img src="/home/pablo/documents/Seven/seven/site3/oi_seven/img/home_combo1.png" width="950px"></p>
+                        <h2>Combo<img src="{{ url_for('static', filename='img/oi.png') }}" width="80px" height="80px">: </h2>
+                        <p><img src="{{ url_for('static', filename='img/home_combo1.png') }}" width="950px"></p>
                     </section>
                     <section>
-                        <h2>Combo<img src="/home/pablo/documents/Seven/seven/site3/oi_seven/img/oi.png" width="80px" height="80px">Fibra Óptica: </h2>
-                        <p><img src="/home/pablo/documents/Seven/seven/site3/oi_seven/img/wind-fibra.jpg" width="950px"></p>
+                        <h2>Combo<img src="{{ url_for('static', filename='img/oi.png') }}" width="80px" height="80px">Fibra Óptica: </h2>
+                        <p><img src="{{ url_for('static', filename='img/wind-fibra.jpg') }}" width="950px"></p>
                     </section>
                     <footer>
                         <h3>Documentos Necessários na Instalação: </h3>
-                        <p><ul>
+                        <ul>
                             <li>Identidade;</li>
                             <li>CPF;</li>
                             <li>Comprovante de residência;</li>
                         </ul><br>
                         No momento da instalação, será necessário preencher um formulário.
-                    </p>
                     </footer>
                 </article>
 
@@ -80,14 +80,16 @@
         <div class="footer-container">
             <footer class="wrapper">
                 <h3>Seven Soluções Comerciais</h3>
-                <a href="https://www.facebook.com/comercialsevensolution/"><img src="/home/pablo/documents/Seven/seven/site3/oi_seven/img/Like-Button_PT-BR_RGB.png" width="90px"></a>
+                <a href="https://www.facebook.com/comercialsevensolution/"><img src="{{ url_for('static',
+                filename='img/Like-Button_PT-BR_RGB.png') }}" width="90px"></a>
             </footer>
         </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="{{ url_for('static', filename='js/vendor/jquery-1.11.2
+        .min.js') }}">')</script>
 
-        <script src="../js/main.js"></script>
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
