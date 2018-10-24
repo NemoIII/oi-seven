@@ -1,0 +1,28 @@
+<svg width="49px" height="46px" viewBox="0 0 49 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="25.7081515%" y1="80.7695586%" x2="92.2142235%" y2="12.0349564%" id="linearGradient-1">
+            <stop stop-color="#73CBFC" offset="0%"></stop>
+            <stop stop-color="#73CBF9" offset="0.4665881%"></stop>
+            <stop stop-color="#74CDBF" offset="10.35%"></stop>
+            <stop stop-color="#75CE8E" offset="19.89%"></stop>
+            <stop stop-color="#75CF68" offset="28.85%"></stop>
+            <stop stop-color="#76CF4D" offset="37.12%"></stop>
+            <stop stop-color="#76D03D" offset="44.42%"></stop>
+            <stop stop-color="#76D037" offset="50%"></stop>
+            <stop stop-color="#7CD237" offset="56.99%"></stop>
+            <stop stop-color="#8CD838" offset="66.14%"></stop>
+            <stop stop-color="#A7E139" offset="76.49%"></stop>
+            <stop stop-color="#CDEE3A" offset="87.72%"></stop>
+            <stop stop-color="#FDFE3C" offset="99.54%"></stop>
+            <stop stop-color="#FFFF3C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Home-e-Produtos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo_02" fill-rule="nonzero">
+            <g id="Group">
+                <path d="M22.7,1.6 C11.1,4.6 2.5,9.6 1,15.8 C-0.5,22 7.4,34.5 18.5,40.8 C29.6,47.1 39.9,48.3 44.2,40.8 C47.8,34.6 50.3,22.8 45.7,9.2 C42.6,-0.2 34.3,-1.4 22.7,1.6 Z" id="Shape" fill="url(#linearGradient-1)"></path>
+                <path d="M31.4,18.8 C32.6,18.8 33.6,17.8 33.6,16.6 C33.6,15.4 32.6,14.4 31.4,14.4 C30.2,14.4 29.2,15.4 29.2,16.6 C29.1,17.8 30.1,18.8 31.4,18.8 Z M31.4,20.4 C30.1,20.4 29.1,23.4 29.1,27 C29.1,30.7 30.1,33.6 31.4,33.6 C32.7,33.6 33.7,30.6 33.7,27 C33.7,23.4 32.6,20.4 31.4,20.4 Z M21.3,20.4 C17.6,20.4 15.1,23.3 15.1,27 C15.1,30.7 17.6,33.6 21.3,33.6 C25,33.6 27.5,30.7 27.5,27 C27.5,23.4 25,20.4 21.3,20.4 Z M21.3,30.6 C19.6,30.6 18.6,28.8 18.6,27.1 C18.6,25.3 19.5,23.6 21.3,23.6 C23,23.6 23.9,25.3 23.9,27.1 C23.9,28.8 23,30.6 21.3,30.6 Z" id="Shape" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>
