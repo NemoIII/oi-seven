@@ -1,6 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, IntegerField, validators, ValidationError
-from user.models import Enviar
+from wtforms import StringField, IntegerField, validators
 
 
 class EnviarForm(FlaskForm):

@@ -5,14 +5,15 @@ db = MongoEngine()
 
 
 def create_app(config=None):
-  app = Flask(__name__)
-
-  if config is not None:
-    app.config.from_object(config)
-
-  db.init_app(app)
+    app = Flask(__name__)
   
-  from user.views import app_page
-  app.register_blueprint(app_page, url_prefix="/")
-
-  return app
+    if config is not None:
+      app.config.from_object(config)
+    
+    db.init_app(app)
+  
+    from user.views import app_page, user_page
+    app.register_blueprint(app_page, url_prefix="/")
+    app.register_blueprint(user_page, url_prefix="/user")
+    
+    return app
