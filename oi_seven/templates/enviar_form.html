@@ -1,6 +1,7 @@
 {% extends "index.html" %}
 
 {% block form %}
+    <div class="modal-form">
     {% from "_formhelpers.jinja2" import render_field %}
         <form class="form-enviar" method="POST">
             {{ form.csrf_token }}
@@ -10,4 +11,5 @@
             <br>
             <input id="button" type="submit" value="Enviar" name="submit">
         </form>
+    </div>
 {% endblock %}

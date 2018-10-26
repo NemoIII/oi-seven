@@ -1,20 +1,16 @@
-from flask import Blueprint, render_template, request, session
-from .models import Enviar
+from flask import Blueprint, render_template, request
+from user.forms import EnviarForm
+from user.models import Enviar
 
 app_page = Blueprint('app_page', __name__)
 user_page = Blueprint('user_page', __name__)
 
 
+# @user_page.route('/index', methods=['POST'])
 @app_page.route('/')
 @app_page.route('/index', methods=['GET', 'POST'])
-def index():
-	# form = EnviarForm()
-	return render_template("index.html")
-
-
-@user_page.route('/index', methods=['POST'])
-def EnviarForm():
-	form = EnviarForm()
+def envForm():
+	form = EnviarForm(request.form)
 	if request.method == 'POST' and form.validate():
 		envio = Enviar(
 			name=form.name.data,
@@ -23,4 +19,10 @@ def EnviarForm():
 			)
 		envio.save()
 		return f"Obrigado por entrar em contato, {form.name.data}."
-	return render_template("index.html", form=form)
+	return render_template("enviar_form.html", form=form)
+
+
+
+# def index():
+# 	# form = EnviarForm()
+# 	return render_template("index.html")
