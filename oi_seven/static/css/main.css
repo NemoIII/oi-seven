@@ -119,6 +119,10 @@ input#button {
     height: 370px;
 }
 
+.main aside {
+    display: block;
+}
+
 .footer-container,
 .main aside {
     border-top: 5px solid #585858;

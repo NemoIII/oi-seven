@@ -1,19 +1,13 @@
 {% extends "index.html" %}
 
 {% block form %}
-<div class="row">
-    <div class="col-md-6 offset-md-3">
-        {% from "./_formhelpers.jinja2" import render_field %}
-        <form class="form-enviar" method="POST" enctype="multipart/form-data" action="{{ url_for('user_page.index') }}">
-            <fieldset>
-                {{ form.csrf_token }}
-                {{ render_field(form.name, class="form-control", placeholder="Seu nome") }}
-                {{ render_field(form.phone, class="form-control", placeholder="Seu telefone + DDD") }}
-                {{ render_field(form.mobile, class="form-control", placeholder="Seu celular + DDD") }}
-                <br>
-                <input id="button" type="submit" value="Enviar" name="submit">
-            </fieldset>
+    {% from "_formhelpers.jinja2" import render_field %}
+        <form class="form-enviar" method="POST">
+            {{ form.csrf_token }}
+            {{ render_field(form.name, class="form-control", placeholder="Seu nome") }}
+            {{ render_field(form.phone, class="form-control", placeholder="Seu telefone + DDD") }}
+            {{ render_field(form.mobile, class="form-control", placeholder="Seu celular + DDD") }}
+            <br>
+            <input id="button" type="submit" value="Enviar" name="submit">
         </form>
-    </div>
-</div>
 {% endblock %}
