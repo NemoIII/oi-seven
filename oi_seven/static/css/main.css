@@ -40,6 +40,10 @@ fieldset {
     padding: 0;
 }
 
+.form-control {
+    color: #2A0A29;
+}
+
 textarea {
     resize: vertical;
 }

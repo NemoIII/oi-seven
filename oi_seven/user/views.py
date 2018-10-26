@@ -9,7 +9,7 @@ user_page = Blueprint('user_page', __name__)
 # @user_page.route('/index', methods=['POST'])
 @app_page.route('/')
 @app_page.route('/index', methods=['GET', 'POST'])
-def envForm():
+def enviarForm():
 	form = EnviarForm(request.form)
 	if request.method == 'POST' and form.validate():
 		envio = Enviar(
