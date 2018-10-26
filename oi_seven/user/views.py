@@ -15,7 +15,7 @@ def enviarForm():
 	message = None
 	number = list(range(1, 99999, 1))
 	special_chars = ['!', '#', '@', ';', ':', ',', '*', '&', '%', '$']
-	letra = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'w', 'x', 'y', 'z' , 'll', 'ç']
+	letra = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'w', 'x', 'y', 'z', 'll', 'ç']
 	
 	if request.method == 'POST' and form.validate():
 		envio = Enviar(
