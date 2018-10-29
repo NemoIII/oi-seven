@@ -19,9 +19,9 @@ def enviarForm():
 	
 	if request.method == 'POST' and form.validate():
 		envio = Enviar(
-			name=len(str(form.name.data.lower())),
-			phone=len(str(form.phone.data)),
-			mobile=len(str(form.mobile.data))
+			name=form.name.data.lower(),
+			phone=form.phone.data,
+			mobile=form.mobile.data
 			)
 		if form.name.data.contains(any(number)) or form.name.data.contains(any(special_chars)):
 			error = "O nome deve conter apenas letras."
