@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect, url_for, Flask
+from flask import Blueprint, render_template, request, redirect, url_for, Flask, flash
 from user.forms import EnviarForm
 from user.models import Enviar
 
@@ -24,16 +24,14 @@ def enviarForm():
 			phone=form.phone.data,
 			mobile=form.mobile.data
 			)
-		''' if form.name.data.contains(any(number)) or form.name.data.contains(any(special_chars)):
-			error = "O nome deve conter apenas letras."
+		if form.name.data.contains(any(number)) or form.name.data.contains(any(special_chars)):
+			error = f"O nome deve conter apenas letras."
 		if form.phone.data.contains(any(letra)) or form.mobile.data.contains(any(letra)):
-			error = "Este campo deve conter apenas números."
+			error = f"Este campo deve conter apenas números."
 		if not error:
 			envio.save()
 			message = f"Obrigado por entrar em contato, {form.name.data.lower()}."
 			return message
-		redirect(url_for('enviarForm'))'''
-		envio.save()
 		redirect(url_for('enviarForm'))
 	return render_template("enviar_form.html", form=form, error=error, message=message)
 
