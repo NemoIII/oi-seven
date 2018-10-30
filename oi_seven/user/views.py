@@ -33,6 +33,8 @@ def enviarForm():
 			message = f"Obrigado por entrar em contato, {form.name.data.lower()}."
 			return message
 		redirect(url_for('enviarForm'))'''
+		envio.save()
+		redirect(url_for('enviarForm'))
 	return render_template("enviar_form.html", form=form, error=error, message=message)
 
 
